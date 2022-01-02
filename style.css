@@ -1,0 +1,283 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@500&family=VT323&display=swap');
+:root {
+  --txt-light-color: #f7f7f7;
+  --txt-dark-color: #222;
+  --max-desktop-resolution: 800px;
+  --main-font: "Open Sans", sans-serif;
+  --second-font: "Bebas Neue", cursive;
+  --third-font:'VT323', monospace;
+
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: var(--main-font);
+}
+
+.container {
+  --whoami-bg-color: bisque;
+  --myhobby-bg-color: crimson;
+  --mylife-bg-color: coral;
+  --whoami-image-color: coral;
+  --myhobby-image-color: bisque;
+  --mylife-image-color: crimson;
+  --whoami-border-color: #555555;
+  --myhobby-border-color: #444;
+  --mylife-border-color: bisque;
+}
+
+section nav {
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9;
+}
+
+section nav ul {
+  list-style-type: none;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0;
+}
+
+section nav ul li {
+  padding: 3px 5px;
+}
+
+section nav ul li:hover {
+  border-bottom:5px solid rgb(99, 162, 255) ;
+}
+
+section nav ul li a {
+  color: var(--txt-light-color);
+  text-decoration: none;
+  text-transform: uppercase;
+  margin: 5px 10px;
+  padding: 10px;
+  font-size: 2em;
+  font-family: var(--third-font);
+}
+section nav ul li a:hover {
+  color: rgb(99, 162, 255);
+}
+.container h1 {
+  margin: 0;
+  padding: 0;
+  color: var(--txt-light-color);
+  font-size: 4em;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-align: center;
+}
+h4{
+  margin-top: 20px;
+  margin-bottom: -12px;
+  margin-left: -370px;
+  padding: 0;
+  color: var(--txt-light-color);
+  font-size: 0.7em;
+  font-weight: 400;
+  letter-spacing: 3px;
+  text-align: left;
+}
+
+button{
+    margin-top: 100px;
+    margin-bottom: -25px;
+    background-color: transparent;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 25px;
+    padding: 15px;
+    color: white;
+    font-size: 15px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+button:hover{
+    background-color: rgba(79, 79, 219, 0.993);
+    border-radius: 25px;
+}
+.container p {
+  margin: -10px;
+  color: var(--txt-light-color);
+  font-size: 30px;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.menu {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.menu--whoami {
+    background-image:
+    /* top, transparent black, faked with gradient */ 
+    linear-gradient(
+      rgba(0, 0, 0, 0.411), 
+      rgba(0, 0, 0, 0.459)
+    ),
+    /* bottom, image */
+    url(assets/parallax/bg3.jpg);
+    font-family: var(--third-font);
+    text-transform: uppercase;
+    font-size: 2em;
+  }
+  .menu--whoami p{
+    font-family: var(--main-font);
+    font-size: 0.7em;
+  }
+.menu--myhobby {
+  background-image: url(assets/parallax/bg.jpg);
+  flex-flow: row wrap;
+  justify-content: center;
+}
+.menu--myhobby h1 {
+  font-size: 2.5em;
+  font-family: var(--second-font);
+}
+.menu--mylife{
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 0.411), 
+    rgba(0, 0, 0, 0.459)
+  ), url(assets/parallax/bg8.jpg);
+}
+.menu--mylife h1 {
+  font-size: 2.5em;
+}
+.menu--mylife p{
+  font-size: 1em;
+}
+.menu--mycontact{
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 0.411), 
+    rgba(0, 0, 0, 0.459)
+  ), url(assets/parallax/bg10.jpg);
+}
+.menu--mycontact h1 {
+  font-size: 2.5em;
+  text-transform: uppercase;
+}
+.menu--mycontact p{
+  font-size: 1em;
+  margin-top: 10px;
+  text-align: left;
+}
+.picture {
+  --picture-size-width: 150px;
+  --picture-size-height: 150px;
+  background-size: cover;
+  background-position: center;
+  background-color: transparent;
+}
+
+.picture--rounded {
+  background-image: url(assets/boy.png);
+  width: 120px;
+  height: 120px;
+
+}
+
+.picture--square {
+  background-image: url(assets/programing.png);
+  width: var(--picture-size-width);
+  height: var(--picture-size-height);
+}
+
+.picture--custom {
+  background-image: url(assets/game-console.png);
+  width: var(--picture-size-width);
+  height: var(--picture-size-height);
+}
+.picture--life {
+  background-image: url(assets/contact.png);
+  width: var(--picture-size-width);
+  height: var(--picture-size-height);
+}
+img{
+  width: 15px;
+}
+@media only screen and (max-width: 576px) {
+  .parallax {
+    background-attachment: scroll;
+  }
+  .container h1 {
+    font-size: 1.4em;
+    margin-top: 15px;
+    text-align: center;
+  }
+  .container p {
+    font-size: 0.9em;
+    margin-top: 5px;
+    text-align: center;
+    justify-content: center;
+  }
+  h4{
+    margin-left: -40px;
+  }
+  .menu--myhobby {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .menu--whoami p{
+    margin-top: -10px;
+    font-size: 0.7em;
+    
+  }
+  section nav {
+    background-color: transparent;
+    position: fixed;
+    bottom: 0;
+    top: auto;
+    left: 0;
+    width: 100%;
+  }
+
+  section nav ul {
+    border-top:2px solid rgb(19, 97, 89);
+    background: transparent;
+    width: 100%;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+
+  section nav ul,
+  section nav ul li {
+    padding: 2px;
+    margin-bottom: 2px;
+  }
+
+  section nav ul li {
+    background-image: url(assets/parallax/nav.jpg);
+    border-radius: 25px;
+    border: 1px solid black;
+  }
+  section nav ul li:nth-child(1) {
+    order: 1;
+  }
+  button{
+    margin-top: 45px;
+    margin-bottom: 30px;
+    padding: 10px;
+    font-size: 15px;
+  }
+}
